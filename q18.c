@@ -60,6 +60,16 @@ int searchQuadraticProbing(HashTable* ht, int key) {
     
     return -1;
 }
+void displayHashTable(HashTable* ht) {
+    printf("Hash Table:\n");
+    for (int i = 0; i < TABLE_SIZE; i++) {
+        if (ht->occupied[i]) {
+            printf("Index %d: %d\n", i, ht->table[i]);
+        } else {
+            printf("Index %d: Empty\n", i);
+        }
+    }
+}
 
 
 int main() {
